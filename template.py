@@ -7,40 +7,40 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 
 list_of_files = [
-    "hr-policy-rag/Dockerfile",
-    "hr-policy-rag/requirements.txt",
-    "hr-policy-rag/pyproject.toml",
-    "hr-policy-rag/.env",
-    "hr-policy-rag/config.py",
-    "hr-policy-rag/README.md",
+    "Dockerfile",
+    "requirements.txt",
+    "pyproject.toml",
+    ".env",
+    "config.py",
+    "README.md",
 
-    "hr-policy-rag/data/raw_documents/.gitkeep",  # To ensure directory exists in Git
-    "hr-policy-rag/data/processed/.gitkeep",
-    "hr-policy-rag/data/processed/chroma/.gitkeep",  # or pinecone
-    "hr-policy-rag/data/processed/json_cache/.gitkeep",
+    "data/raw_documents/.gitkeep",  # To ensure directory exists in Git
+    "data/processed/.gitkeep",
+    "data/processed/chroma/.gitkeep",  # or pinecone
+    "data/processed/json_cache/.gitkeep",
 
-    "hr-policy-rag/src/hr_policy_rag/__init__.py",
+    "src/hr_policy_rag/__init__.py",
 
-    "hr-policy-rag/src/hr_policy_rag/core/__init__.py",
-    "hr-policy-rag/src/hr_policy_rag/core/models.py",
-    "hr-policy-rag/src/hr_policy_rag/core/vector_store.py",
-    "hr-policy-rag/src/hr_policy_rag/core/retriever.py",
-    "hr-policy-rag/src/hr_policy_rag/core/rag_chain.py",
+    "src/hr_policy_rag/core/__init__.py",
+    "src/hr_policy_rag/core/models.py",
+    "src/hr_policy_rag/core/vector_store.py",
+    "src/hr_policy_rag/core/retriever.py",
+    "src/hr_policy_rag/core/rag_chain.py",
 
-    "hr-policy-rag/src/hr_policy_rag/utils/__init__.py",
-    "hr-policy-rag/src/hr_policy_rag/utils/file_loader.py",
-    "hr-policy-rag/src/hr_policy_rag/utils/chunkers.py",
-    "hr-policy-rag/src/hr_policy_rag/utils/helpers.py",
+    "src/hr_policy_rag/utils/__init__.py",
+    "src/hr_policy_rag/utils/file_loader.py",
+    "src/hr_policy_rag/utils/chunkers.py",
+    "src/hr_policy_rag/utils/helpers.py",
 
-    "hr-policy-rag/src/hr_policy_rag/frontend/__init__.py",
-    "hr-policy-rag/src/hr_policy_rag/frontend/ui.py",
+    "src/hr_policy_rag/frontend/__init__.py",
+    "src/hr_policy_rag/frontend/ui.py",
 
-    "hr-policy-rag/src/hr_policy_rag/tests/__init__.py",
-    "hr-policy-rag/src/hr_policy_rag/tests/test_retriever.py",
-    "hr-policy-rag/src/hr_policy_rag/tests/test_rag.py",
+    "src/hr_policy_rag/tests/__init__.py",
+    "src/hr_policy_rag/tests/test_retriever.py",
+    "src/hr_policy_rag/tests/test_rag.py",
 
-    "hr-policy-rag/scripts/initialize_vectorstore.py",
-    "hr-policy-rag/scripts/console_test.py",
+    "scripts/initialize_vectorstore.py",
+    "scripts/console_test.py",
 ]
 
 
