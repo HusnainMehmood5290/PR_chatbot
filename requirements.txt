@@ -1,0 +1,10 @@
+langchain-google_genai
+langchain-huggingface
+langchain-chroma
+langchain
+langchain-core
+langchain-community
+pymupdf4llm
+langchain-text-splitters
+python-dotenv
+sentence-transformers

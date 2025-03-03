@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hr-policy-rag"
+version = "0.1.0"
+description = "RAG system for HR policy analysis"
+readme = "README.md"
+authors = [{ name = "Husnain Mehmood", email = "husnainmehmood5290@gmail.com" }]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: HR Professionals",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "langchain-chroma",
+    "streamlit",
+    "python-dotenv",
+    
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "black>=23.0", "mypy>=1.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
