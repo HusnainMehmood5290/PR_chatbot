@@ -1,6 +1,11 @@
-.gitkeep
+#remove confidential files
+data/processed/child_store/*
+data/processed/parent_store/*
+data/raw_documents/*
 
-# Byte-compiled / optimized / DLL files
+!data/raw_documents/.gitkeep
+
+
 __pycache__/
 *.py[cod]
 *$py.class

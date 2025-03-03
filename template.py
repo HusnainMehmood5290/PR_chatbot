@@ -16,14 +16,12 @@ list_of_files = [
 
     "data/raw_documents/.gitkeep",  # To ensure directory exists in Git
     "data/processed/.gitkeep",
-    "data/processed/chroma/.gitkeep",  # or pinecone
-    "data/processed/json_cache/.gitkeep",
 
     "src/__init__.py",
 
     "src/core/__init__.py",
     "src/core/models.py",
-    "src/core/vector_store.py",
+    "src/core/ingest.py",
     "src/core/retriever.py",
     "src/core/rag_chain.py",
 
