@@ -8,3 +8,5 @@ pymupdf4llm
 langchain-text-splitters
 python-dotenv
 sentence-transformers
+pydantic-settings
+pydantic
