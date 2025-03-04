@@ -20,6 +20,7 @@ class RAGConfig(BaseSettings):
 
     # API keys
     GOOGLE_API_KEY: str = Field(..., env="GOOGLE_API_KEY")
+    LANGSMITH_API_KEY: str = Field(..., env="LANGSMITH_API_KEY")
     
     # link to .env file
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}

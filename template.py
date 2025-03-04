@@ -30,8 +30,7 @@ list_of_files = [
     "src/utils/chunkers.py",
     "src/utils/helpers.py",
 
-    "src/frontend/__init__.py",
-    "src/frontend/ui.py",
+    "ui.py",
 
     "src/tests/__init__.py",
     "src/tests/test_retriever.py",

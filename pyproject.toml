@@ -16,10 +16,20 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 dependencies = [
+    "langchain-google_genai",
+    "langchain-huggingface",
     "langchain-chroma",
-    "streamlit",
+    "langchain",
+    "langchain-core",
+    "langchain-community",
+    "pymupdf4llm",
+    "langchain-text-splitters",
     "python-dotenv",
-    
+    "sentence-transformers",
+    "pydantic-settings",
+    "pydantic",
+    "langgraph",
+    "streamlit",
 ]
 
 [project.optional-dependencies]
