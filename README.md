@@ -39,7 +39,7 @@ PR_chatbot is a RAG (Retrieval-Augmented Generation) system for HR policy analys
 ## Setting Up Environment Variables
 Create a [.env](http://_vscodecontentref_/1) file in the root directory of the project with the following content:
 
-
+GOOGLE_API_KEY=your_google_api_key
 
 Replace `your_google_api_key` with your actual Google API key.
 
