@@ -21,7 +21,7 @@ PR_chatbot is a RAG (Retrieval-Augmented Generation) system for HR policy analys
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/PR_chatbot.git
+    git clone https://github.com/HusnainMehmood5290/PR_chatbot.git
     cd PR_chatbot
     ```
 
