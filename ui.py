@@ -37,7 +37,7 @@ def display_chat_history():
             st.markdown(f"<div style='text-align: left; font-weight: bold;'>Assistant</div> <div style='text-align: left;'>{chat['assistant']}</div>", unsafe_allow_html=True)
 
 def main():
-    st.set_page_config(page_title="Information Retrieval", layout="wide")
+    st.set_page_config(page_title="HR Policy Chatbot", layout="wide")
     st.header("📚 Information Retrieval System")
 
     # Display chat history

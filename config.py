@@ -3,7 +3,7 @@ from pydantic import Field
 
 class RAGConfig(BaseSettings):
     EMBEDDING_MODEL: str = "sentence-transformers/all-mpnet-base-v2"
-    LLM_MODEL: str = "gemini-1.5-flash"
+    LLM_MODEL: str = "gemma3"
 
     # Splitter
     CHILD_CHUNK_SIZE: int = 250

@@ -10,6 +10,7 @@ python-dotenv
 sentence-transformers
 pydantic-settings
 pydantic
+langchain_ollama
 
 langgraph
 streamlit

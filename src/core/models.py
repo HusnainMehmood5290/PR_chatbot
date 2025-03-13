@@ -3,13 +3,13 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_huggingface import HuggingFaceEmbeddings
 from config import config
 import os
-
-
+from langchain_ollama import OllamaLLM
 class Models:
     def __init__(self):
         # Initialize only the LLM immediately (if needed)
         self._embeddings_HuggingFace = None
         self._gemini_llm=None
+        self._ollama_llm=None
 
     @property
     def embeddings_HuggingFace(self): #best and fastest + suggested by hugingface
@@ -31,3 +31,14 @@ class Models:
             except Exception as e:
                 print(f"Error initializing gemini model={config.LLM_MODEL}: {e}")
         return self._gemini_llm
+    
+    
+    @property
+    def ollama_llm(self):
+        if self._ollama_llm is None:
+            try:
+                print(f"Initializing ollama model={config.LLM_MODEL}")
+                self._ollama_llm=OllamaLLM(model=config.LLM_MODEL)
+            except Exception as e:
+                print(f"Error initializing ollama model={config.LLM_MODEL}: {e}")
+        return self._ollama_llm

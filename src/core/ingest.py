@@ -37,7 +37,7 @@ def mark_file_as_processed(file_path):
     except Exception as e:
         print(f"ERROR: Failed to rename {file_path} - {e}")
 
-
+# Scan the folder for new file
 def scan_and_ingest():
     """Scans the raw data folder and processes unprocessed PDFs."""
     pdf_files = [
