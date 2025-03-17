@@ -30,13 +30,18 @@ def create_parent_retriever():
             chunk_overlap=config.CHILD_CHUNK_OVERLAP,
             add_start_index=True,
         )
-        parent_splitter = RecursiveCharacterTextSplitter(chunk_size=config.PARENT_CHUNK_SIZE)
+        parent_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=config.PARENT_CHUNK_SIZE,
+            add_start_index=True
+        )
 
         return ParentDocumentRetriever(
             vectorstore=vector_store,
             docstore=local_store,
             child_splitter=child_splitter,
             parent_splitter=parent_splitter,
+            search_type="mmr",
+            search_kwargs={"k":1,"fetch_k":10}
         )
     except Exception as e:
         print(f"ERROR: Failed to create parent retriever - {e}")
