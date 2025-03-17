@@ -12,7 +12,7 @@
   - [License](#license)
 
 ## Introduction
-PR_chatbot is a RAG (Retrieval-Augmented Generation) system for HR policy analysis. It processes PDF documents, stores embeddings, and retrieves relevant information based on user queries.
+PR_chatbot is a Retrieval-Augmented Generation (RAG) system designed for HR policy analysis. It processes PDF documents, stores embeddings, and retrieves relevant information based on user queries.
 
 ## Prerequisites
 - Python 3.11
@@ -37,11 +37,12 @@ PR_chatbot is a RAG (Retrieval-Augmented Generation) system for HR policy analys
     ```
 
 ## Setting Up Environment Variables
-Create a [.env](http://_vscodecontentref_/1) file in the root directory of the project with the following content:
-
+Create a `.env` file in the root directory of the project with the following content:
+```
 GOOGLE_API_KEY=your_google_api_key
-
-Replace `your_google_api_key` with your actual Google API key.
+LANGSMITH_API_KEY=your_langsmith_api_key
+```
+Replace `your_google_api_key` and `your_langsmith_api_key` with your actual API keys.
 
 ## Running the Project
 1. Initialize the vector store:
@@ -54,8 +55,52 @@ Replace `your_google_api_key` with your actual Google API key.
     python src/core/ingest.py
     ```
 
-## Project Structure
+3. Run the Streamlit UI:
+    ```sh
+    streamlit run ui.py
+    ```
 
+## Project Structure
+```
+PR_chatbot/
+├── .env
+├── .gitignore
+├── config.py
+├── Dockerfile
+├── LICENSE
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── template.py
+├── ui.py
+├── data/
+│   ├── processed/
+│   │   └── child_store/
+│   └── raw_documents/
+│       ├── _finalHR.pdf
+│       └── .gitkeep
+├── scripts/
+│   ├── console_test.py
+│   └── initialize_vectorstore.py
+├── src/
+│   ├── __init__.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── ingest.py
+│   │   ├── models.py
+│   │   ├── rag_chain.py
+│   │   └── retriever.py
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   ├── test_rag.py
+│   │   └── test_retriever.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── chunkers.py
+│       ├── file_loader.py
+│       └── helpers.py
+└── __pycache__/
+```
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](http://_vscodecontentref_/2) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
