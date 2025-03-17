@@ -7,6 +7,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Setting Up Environment Variables](#setting-up-environment-variables)
+  - [Ollama Setup](#ollama-setup)
   - [Running the Project](#running-the-project)
   - [Project Structure](#project-structure)
   - [License](#license)
@@ -41,8 +42,25 @@ Create a `.env` file in the root directory of the project with the following con
 ```
 GOOGLE_API_KEY=your_google_api_key
 LANGSMITH_API_KEY=your_langsmith_api_key
+OLLAMA_API_KEY=your_ollama_api_key
 ```
-Replace `your_google_api_key` and `your_langsmith_api_key` with your actual API keys.
+Replace `your_google_api_key`, `your_langsmith_api_key`, and `your_ollama_api_key` with your actual API keys.
+
+## Ollama Setup
+1. Install the Ollama CLI:
+    ```sh
+    curl -sSL https://ollama.com/install.sh | sh
+    ```
+
+2. Authenticate with your Ollama account:
+    ```sh
+    ollama login
+    ```
+
+3. Verify the installation:
+    ```sh
+    ollama --version
+    ```
 
 ## Running the Project
 1. Initialize the vector store:
