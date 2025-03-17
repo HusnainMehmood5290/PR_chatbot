@@ -42,35 +42,34 @@ Create a `.env` file in the root directory of the project with the following con
 ```
 GOOGLE_API_KEY=your_google_api_key
 LANGSMITH_API_KEY=your_langsmith_api_key
-OLLAMA_API_KEY=your_ollama_api_key
 ```
-Replace `your_google_api_key`, `your_langsmith_api_key`, and `your_ollama_api_key` with your actual API keys.
+Replace `your_google_api_key`, `your_langsmith_api_key`,  with your actual API keys.
 
 ## Ollama Setup
-1. Install the Ollama CLI:
+1. download the Ollama from official site:
     ```sh
-    curl -sSL https://ollama.com/install.sh | sh
+    https://ollama.com/download/OllamaSetup.exe
     ```
 
-2. Authenticate with your Ollama account:
-    ```sh
-    ollama login
-    ```
-
-3. Verify the installation:
+2. Verify the installation through cmd:
     ```sh
     ollama --version
     ```
 
-## Running the Project
-1. Initialize the vector store:
+3. after installation open cmd and run this cmd:
     ```sh
-    python scripts/initialize_vectorstore.py
+    ollama run gemma3
+    ```
+
+## Running the Project
+1. store the Manual pdfs in:
+    ```sh
+    data/raw_documents/emaxple.pdf
     ```
 
 2. Start the main process:
     ```sh
-    python src/core/ingest.py
+    python -m src/core/ingest.py
     ```
 
 3. Run the Streamlit UI:
